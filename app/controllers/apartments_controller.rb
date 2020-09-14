@@ -15,6 +15,7 @@ class ApartmentsController < ApplicationController
   # GET /apartments/new
   def new
     @apartment = Apartment.new
+    @apartment.stations.build
   end
 
   # GET /apartments/1/edit
@@ -69,6 +70,6 @@ class ApartmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def apartment_params
-      params.require(:apartment).permit(:name, :fee, :adress, :age, :notes)
+      params.require(:apartment).permit(:name, :fee, :adress, :age, :notes, stations_attributes: [:line_name, :station_name, :minuites_on_foot, :id])
     end
 end
