@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    models:
+      apartment: 物件
+      station: 最寄り駅
+    attributes:
+      station:
+        station_name: 駅名
+        line_name: 路線名
+        minuites_on_foot: 徒歩分数
+      apartment:
+        apartments: 物件一覧
+        edit_apartment: 物件編集
+        new_apartment: 物件登録
+        new_apartment_link: 物件を登録する
+        name: 物件名
+        fee: 賃料
+        address: 住所
+        age: 築年数
+        notes: 備考
