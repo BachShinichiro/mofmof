@@ -4,8 +4,10 @@ one:
   line_name: MyText
   station_name: MyText
   minuites_on_foot: 1
+  apartment: one
 
 two:
   line_name: MyText
   station_name: MyText
   minuites_on_foot: 1
+  apartment: two

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_13_225400) do
+ActiveRecord::Schema.define(version: 2020_09_14_063933) do
 
   create_table "apartments", force: :cascade do |t|
     t.text "name"
@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 2020_09_13_225400) do
     t.text "line_name"
     t.text "station_name"
     t.integer "minuites_on_foot"
+    t.integer "apartment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["apartment_id"], name: "index_stations_on_apartment_id"
   end
 
 end
