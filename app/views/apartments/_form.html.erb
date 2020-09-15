@@ -40,7 +40,6 @@
 
   <%= form.fields_for :stations do |station| %>
     <h2>最寄駅<%= station.index + 1 %></h2>
-
     <div class="field">
       <p><%= station.label :line_name ,"路線名" %></p>
       <%= station.text_field :line_name %>

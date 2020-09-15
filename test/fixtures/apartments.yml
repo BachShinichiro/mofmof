@@ -3,13 +3,13 @@
 one:
   name: MyText
   fee: 1
-  adress: MyText
+  address: MyText
   age: 1
   notes: MyText
 
 two:
   name: MyText
   fee: 1
-  adress: MyText
+  address: MyText
   age: 1
   notes: MyText

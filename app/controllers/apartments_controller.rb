@@ -20,6 +20,9 @@ class ApartmentsController < ApplicationController
 
   # GET /apartments/1/edit
   def edit
+    if @apartment.stations.last.station_name.present?
+      @apartment.stations.build
+    end
   end
 
   # POST /apartments
@@ -63,13 +66,13 @@ class ApartmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_apartment
-      @apartment = Apartment.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_apartment
+    @apartment = Apartment.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def apartment_params
-      params.require(:apartment).permit(:name, :fee, :adress, :age, :notes, stations_attributes: [:line_name, :station_name, :minuites_on_foot, :id])
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def apartment_params
+    params.require(:apartment).permit(:name, :fee, :address, :age, :notes, stations_attributes: [:line_name, :station_name, :minuites_on_foot, :id])
+  end
 end

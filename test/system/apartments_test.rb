@@ -14,7 +14,7 @@ class ApartmentsTest < ApplicationSystemTestCase
     visit apartments_url
     click_on "New Apartment"
 
-    fill_in "Adress", with: @apartment.adress
+    fill_in "address", with: @apartment.address
     fill_in "Age", with: @apartment.age
     fill_in "Fee", with: @apartment.fee
     fill_in "Name", with: @apartment.name
@@ -29,7 +29,7 @@ class ApartmentsTest < ApplicationSystemTestCase
     visit apartments_url
     click_on "Edit", match: :first
 
-    fill_in "Adress", with: @apartment.adress
+    fill_in "address", with: @apartment.address
     fill_in "Age", with: @apartment.age
     fill_in "Fee", with: @apartment.fee
     fill_in "Name", with: @apartment.name

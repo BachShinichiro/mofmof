@@ -17,7 +17,7 @@ class ApartmentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create apartment" do
     assert_difference('Apartment.count') do
-      post apartments_url, params: { apartment: { adress: @apartment.adress, age: @apartment.age, fee: @apartment.fee, name: @apartment.name, notes: @apartment.notes } }
+      post apartments_url, params: { apartment: { address: @apartment.address, age: @apartment.age, fee: @apartment.fee, name: @apartment.name, notes: @apartment.notes } }
     end
 
     assert_redirected_to apartment_url(Apartment.last)
@@ -34,7 +34,7 @@ class ApartmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update apartment" do
-    patch apartment_url(@apartment), params: { apartment: { adress: @apartment.adress, age: @apartment.age, fee: @apartment.fee, name: @apartment.name, notes: @apartment.notes } }
+    patch apartment_url(@apartment), params: { apartment: { address: @apartment.address, age: @apartment.age, fee: @apartment.fee, name: @apartment.name, notes: @apartment.notes } }
     assert_redirected_to apartment_url(@apartment)
   end
 
